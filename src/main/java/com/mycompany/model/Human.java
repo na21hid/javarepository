@@ -1,4 +1,4 @@
-package model;
+package com.mycompany.model;
 
 public class Human {
    private int id ;
