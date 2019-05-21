@@ -1,10 +1,15 @@
 package com.mycompany.model;
 
+
 public class Human {
    private int id ;
    private int age;
    private String sex;
    private double salary;
+
+
+    public Human() {
+    }
 
     public int getId() {
         return id;
@@ -36,5 +41,10 @@ public class Human {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public void showInfo(){
+        System.out.println("Id: " + id + "\nAge: " + age +
+                "\nSex: "+ sex +  "\n Salary "+ salary + "%");
     }
 }
