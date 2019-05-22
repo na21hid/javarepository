@@ -1,6 +1,9 @@
 package com.mycompany.model;
 
 public class Student extends Human {
-    public Student(String id, String age, String sex, double salary) {
+
+
+    public Student(int id, int age, String sex, double salary) {
+        super(id, age, sex, salary);
     }
 }
