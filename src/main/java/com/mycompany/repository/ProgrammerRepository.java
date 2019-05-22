@@ -4,18 +4,21 @@ import com.mycompany.model.Human;
 
 public class ProgrammerRepository implements Repository {
 
+
+
     @Override
-    public Human read(Human human) {
+    public Human read(int id) {
         return null;
     }
 
     @Override
     public void write(Human human) {
 
+
     }
 
     @Override
-    public void printall(Human human) {
+    public void printall() {
 
     }
 }
