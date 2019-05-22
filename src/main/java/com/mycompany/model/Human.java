@@ -7,6 +7,12 @@ public class Human {
    private String sex;
    private double salary;
 
+    public Human(int id, int age, String sex, double salary) {
+        this.id = id;
+        this.age = age;
+        this.sex = sex;
+        this.salary = salary;
+    }
 
     public Human() {
     }
@@ -43,8 +49,13 @@ public class Human {
         this.salary = salary;
     }
 
-    public void showInfo(){
-        System.out.println("Id: " + id + "\nAge: " + age +
-                "\nSex: "+ sex +  "\n Salary "+ salary + "%");
+    @Override
+    public String toString() {
+        return "Human{" +
+                "id=" + id +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
