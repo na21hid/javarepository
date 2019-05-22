@@ -2,22 +2,29 @@ package com.mycompany.repository;
 
 import com.mycompany.model.Human;
 
-public class TeacherRepository implements Repository{
+import java.util.LinkedList;
+import java.util.List;
+
+public class TeacherRepository implements Repository {
+
+    private String fileName = "/home/amir/javarepository/src/main/resources/users.csv";
+    List<Human> humans = new LinkedList<Human>();
+
+
 
     @Override
-    public Human read(Human human) {
+    public Human read(int id) {
         return null;
     }
 
     @Override
-    public void write(Human human) {
+        public void write (Human human){
+
+        }
+
+        @Override
+        public void printall (){
+
+        }
 
     }
-
-    @Override
-    public void printall(Human human) {
-
-    }
-
-
-}
