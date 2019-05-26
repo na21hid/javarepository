@@ -4,6 +4,7 @@ package com.mycompany.model;
 
 public class Teacher extends Human {
 
-    public Teacher(String id, String age, String sex, double salary) {
+    public Teacher(int id, int age, String sex, double salary) {
+        super(id,age,sex,salary);
     }
 }
