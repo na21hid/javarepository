@@ -14,17 +14,24 @@ public class TeacherRepository implements Repository {
 
     @Override
     public Human read(int id) {
+        for (int i = 0; i < humans.size() ; i++) {
+            if (humans.get(id).getId() == id){
+                return humans.get(id);
+            }
+        }
         return null;
     }
 
     @Override
         public void write (Human human){
-
+            humans.add(human);
         }
 
         @Override
         public void printall (){
-
+            for (int i = 0; i <humans.size() ; i++) {
+                System.out.println(humans.get(i).toString());
+            }
         }
 
     }
