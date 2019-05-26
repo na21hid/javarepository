@@ -1,6 +1,9 @@
 package com.mycompany.mainproject;
 
+import com.mycompany.model.Programer;
 import com.mycompany.model.Student;
+import com.mycompany.model.Teacher;
+import com.mycompany.repository.ProgrammerRepository;
 import com.mycompany.repository.Repository;
 import com.mycompany.repository.StudentRepository;
 import com.mycompany.repository.TeacherRepository;
@@ -18,6 +21,7 @@ public class MainProject {
 
 
         Repository teacherRepository = new TeacherRepository();
+        Repository programmerRepository = new ProgrammerRepository();
 
 
 
@@ -34,13 +38,30 @@ public class MainProject {
             System.out.println(id + " " + type + " " + age + " "+ sex + " "+ salary);
 
             if ("S".equals(type)){
-                System.out.println("Open Student");
+                System.out.println("Student");
                 studentRepository.write(new Student(id,age,sex,salary));
             } //TODO:impliment else if
+            else if("T".equals(type)){
+                System.out.println("Teacher");
+                teacherRepository.write((new Teacher(id,age,sex,salary)));
+            }
+            else if("P".equals(type)){
+                System.out.println("programmer");
+                programmerRepository.write(new Programer(id,age,sex,salary));
+            }else{
+                System.out.println("no exist");
+            }
+
 
         }
         studentRepository.printall();
         System.out.println(studentRepository.read(7).toString());
+
+        teacherRepository.printall();
+
+        programmerRepository.printall();
+        System.out.println(programmerRepository.read(9));
+
 
     }
 
